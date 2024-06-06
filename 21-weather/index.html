@@ -1,0 +1,255 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Vespa </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.ico">
+
+        <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/iconfont.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/bootsnav.css">
+
+
+
+        <!--For Plugins external css-->
+        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+        <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed white no-background">
+                <div class="container">  
+
+                    <!-- Start Atribute Navigation -->
+                    <div class="attr-nav">
+                        <ul style="display: flex; align-items: center;"">
+                            <li><button id="openDialog"><i class="fa fa-search"></i></button></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>        
+                    <!-- End Atribute Navigation -->
+
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <img  style="width: 200px; margin-top: 0px; padding-top: 0px; margin-bottom: 100px;"src="assets/images/logo.png" class="logo logo-display" alt="">
+                            <img style="width: 200px; margin-top: 0px; padding-top: 0px;" src="assets/images/logo.png" class="logo logo-scrolled" alt="">
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-center">
+                            <li><a href="#home">Home</a></li>                    
+                            <li><a href="#features">Sobre</a></li>
+                            <li><a href="#reviews">Location</a></li>
+                            <li><a href="#download">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>   
+            </nav>
+
+            <!--Home Sections-->
+
+            <section id="home" class="home">
+                <div style="width: 100%;"" class="container">
+                    <div  class="row">
+                        <div class="main_home">
+                            <div style="width: 100%; height: 600px; z-index: 1;"" id="map"></div>
+                        </div>
+                        <div class="scrooldown">
+                            <a href="#features"><i class="fa fa-chevron-down"></i></a>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
+
+
+
+            <!--Featured Section-->
+
+            
+            
+            <footer id="footer" class="footer bg-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav class="navbar navbar-default bootsnav footer-menu no-background">
+                                <div class="container">  
+
+                                    <!-- Start Atribute Navigation -->
+                                    <div class="attr-nav">
+                                        
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>        
+                                    <!-- End Atribute Navigation -->
+
+
+                                    <!-- Start Header Navigation -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-footer">
+                                            <i class="fa fa-bars"></i>
+                                        </button>
+                                        <a class="navbar-brand" href="#brand"><img style="width: 200px;" src="assets/images/logo.png" class="logo" alt=""></a>
+                                    </div>
+                                    <!-- End Header Navigation -->
+
+                                    <!-- navbar menu -->
+                                    <div class="collapse navbar-collapse" id="navbar-footer">
+                                        <ul class="nav navbar-nav navbar-center">
+                                            <li><a href="#home">Home</a></li>                    
+                                            <li><a href="#features">Vespa</a></li>
+                                            <li><a href="#reviews">Location</a></li>
+                                            <li><a href="#download">Contact</a></li>
+                                        </ul>
+                                    </div><!-- /.navbar-collapse -->
+                                </div>   
+                            </nav>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="col-md-12">
+                            <div class="main_footer text-center p-top-40 p-bottom-30">
+                                <p class="wow fadeInRight" data-wow-duration="1s">
+                                    desenvolvido por Pedro Mamede
+                                    2024. All Rights Reserved
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+
+        <script src="assets/geojson/data/viana.js"></script>
+        <script src="assets/geojson/data/aveiro.js"></script>
+        <script src="assets/geojson/data/braganca.js"></script>
+        <script src="assets/geojson/data/guarda.js"></script>
+        <script src="assets/geojson/data/vilaReal.js"></script>
+        <script src="assets/geojson/data/braga.js"></script>
+        <script src="assets/geojson/data/porto.js"></script>
+        <script src="assets/geojson/data/viseu.js"></script>
+        <script src="assets/geojson/portugal.js"></script>
+
+        <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/js/swiper.min.js"></script>
+        <script src="assets/js/jquery.collapse.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+
+
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
+
+<script>
+    var map = L.map('map').setView([39.736946, -8.142685], 6.5);
+    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {});
+    osm.addTo(map);
+
+    var districtLayers = {};
+
+    function addDistrict(name, geojsonData) {
+        districtLayers[name] = L.geoJSON(geojsonData, {
+            style: {
+                fillOpacity: 0,
+                weight: 2,
+                color: 'blue'
+            }
+        }).addTo(map);
+        districtLayers[name].setStyle({opacity: 0});
+    }
+    var portugal = L.geoJSON(portugalJSON,{
+        onEachFeature: function(feature,layer){
+            layer.bindPopup('<b>País: </b>' + feature.properties.name)
+        },
+        style:{
+            fillOpacity:0,
+            weight: 2,
+            color: 'red'
+        }
+    }).addTo(map);
+
+    addDistrict('aveiro', aveiroJSON);
+    addDistrict('braga', bragaJSON);
+    addDistrict('braganca', bragancaJSON);
+    addDistrict('guarda', guardaJSON);
+    addDistrict('porto', portoJSON);
+    addDistrict('viana', vianaJSON);
+    addDistrict('vilaReal', vilaRealJSON);
+    addDistrict('viseu', viseuJSON);
+
+    function highlightDistrict(district) {
+        for (var key in districtLayers) {
+            if (districtLayers.hasOwnProperty(key)) {
+                districtLayers[key].setStyle({opacity: 0});
+            }
+        }
+        districtLayers[district].setStyle({opacity: 1});
+    }
+</script>
+<script src="assets/js/dialog.js"></script>
+
