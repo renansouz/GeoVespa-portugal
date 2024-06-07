@@ -22,14 +22,8 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <link rel="stylesheet" href="assets/css/bootsnav.css">
 
-
-
-        <!--For Plugins external css-->
-        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
-        <!--Theme custom css -->
         <link rel="stylesheet" href="assets/css/style.css">
 
-        <!--Theme Responsive css-->
         <link rel="stylesheet" href="assets/css/responsive.css" />
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -39,8 +33,6 @@
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse">
-
-
         <!-- Preloader -->
         <div id="loading">
             <div id="loading-center">
@@ -53,14 +45,10 @@
             </div>
         </div><!--End off Preloader -->
 
-
         <div class="culmn">
             <!--Home page style-->
-
-
             <nav class="navbar navbar-default bootsnav navbar-fixed white no-background">
                 <div class="container">  
-
                     <!-- Start Atribute Navigation -->
                     <div class="attr-nav">
                         <ul style="display: flex; align-items: center;"">
@@ -72,7 +60,6 @@
                     </div>        
                     <!-- End Atribute Navigation -->
 
-
                     <!-- Start Header Navigation -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -82,7 +69,6 @@
                             <img  style="width: 200px; margin-top: 0px; padding-top: 0px; margin-bottom: 100px;"src="assets/images/logo.png" class="logo logo-display" alt="">
                             <img style="width: 200px; margin-top: 0px; padding-top: 0px;" src="assets/images/logo.png" class="logo logo-scrolled" alt="">
                         </a>
-
                     </div>
                     <!-- End Header Navigation -->
 
@@ -99,7 +85,6 @@
             </nav>
 
             <!--Home Sections-->
-
             <section id="home" class="home">
                 <div style="width: 100%;"" class="container">
                     <div  class="row">
@@ -113,12 +98,7 @@
                 </div><!--End off container -->
             </section> <!--End off Home Sections-->
 
-
-
             <!--Featured Section-->
-
-            
-            
             <footer id="footer" class="footer bg-black">
                 <div class="container">
                     <div class="row">
@@ -127,8 +107,7 @@
                                 <div class="container">  
 
                                     <!-- Start Atribute Navigation -->
-                                    <div class="attr-nav">
-                                        
+                                    <div class="attr-nav">            
                                         <ul>
                                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -136,7 +115,6 @@
                                         </ul>
                                     </div>        
                                     <!-- End Atribute Navigation -->
-
 
                                     <!-- Start Header Navigation -->
                                     <div class="navbar-header">
@@ -171,14 +149,9 @@
                     </div>
                 </div>
             </footer>
-
-
-
-
         </div>
 
         <!-- JS includes -->
-
         <script src="assets/geojson/data/viana.js"></script>
         <script src="assets/geojson/data/aveiro.js"></script>
         <script src="assets/geojson/data/braganca.js"></script>
@@ -198,58 +171,58 @@
         <script src="assets/js/jquery.collapse.js"></script>
         <script src="assets/js/bootsnav.js"></script>
 
-
-
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
+
+        <script>
+            var map = L.map('map').setView([39.736946, -8.142685], 6.5);
+            var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {});
+            osm.addTo(map);
+        
+            var districtLayers = {};
+        
+            function addDistrict(name, geojsonData) {
+                districtLayers[name] = L.geoJSON(geojsonData, {
+                    style: {
+                        fillOpacity: 0,
+                        weight: 2,
+                        color: 'blue'
+                    }
+                }).addTo(map);
+                districtLayers[name].setStyle({opacity: 0});
+            }
+            var portugal = L.geoJSON(portugalJSON,{
+                onEachFeature: function(feature,layer){
+                    layer.bindPopup('<b>País: </b>' + feature.properties.name)
+                },
+                style:{
+                    fillOpacity:0,
+                    weight: 2,
+                    color: 'red'
+                }
+            }).addTo(map);
+        
+            addDistrict('aveiro', aveiroJSON);
+            addDistrict('braga', bragaJSON);
+            addDistrict('braganca', bragancaJSON);
+            addDistrict('guarda', guardaJSON);
+            addDistrict('porto', portoJSON);
+            addDistrict('viana', vianaJSON);
+            addDistrict('vilaReal', vilaRealJSON);
+            addDistrict('viseu', viseuJSON);
+        
+            function highlightDistrict(district) {
+                for (var key in districtLayers) {
+                    if (districtLayers.hasOwnProperty(key)) {
+                        districtLayers[key].setStyle({opacity: 0});
+                    }
+                }
+                districtLayers[district].setStyle({opacity: 1});
+            }
+        </script>
+        <script src="assets/js/dialog.js"></script>
     </body>
 </html>
 
-<script>
-    var map = L.map('map').setView([39.736946, -8.142685], 6.5);
-    var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {});
-    osm.addTo(map);
 
-    var districtLayers = {};
-
-    function addDistrict(name, geojsonData) {
-        districtLayers[name] = L.geoJSON(geojsonData, {
-            style: {
-                fillOpacity: 0,
-                weight: 2,
-                color: 'blue'
-            }
-        }).addTo(map);
-        districtLayers[name].setStyle({opacity: 0});
-    }
-    var portugal = L.geoJSON(portugalJSON,{
-        onEachFeature: function(feature,layer){
-            layer.bindPopup('<b>País: </b>' + feature.properties.name)
-        },
-        style:{
-            fillOpacity:0,
-            weight: 2,
-            color: 'red'
-        }
-    }).addTo(map);
-
-    addDistrict('aveiro', aveiroJSON);
-    addDistrict('braga', bragaJSON);
-    addDistrict('braganca', bragancaJSON);
-    addDistrict('guarda', guardaJSON);
-    addDistrict('porto', portoJSON);
-    addDistrict('viana', vianaJSON);
-    addDistrict('vilaReal', vilaRealJSON);
-    addDistrict('viseu', viseuJSON);
-
-    function highlightDistrict(district) {
-        for (var key in districtLayers) {
-            if (districtLayers.hasOwnProperty(key)) {
-                districtLayers[key].setStyle({opacity: 0});
-            }
-        }
-        districtLayers[district].setStyle({opacity: 1});
-    }
-</script>
-<script src="assets/js/dialog.js"></script>
 
