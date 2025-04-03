@@ -23,3 +23,7 @@ Coordinate-Based District Highlighting
 ### 📌 Note
 
 This feature was developed as part of a freelance project.
+
+### 👉 Watch the Demo
+
+check out a video of the project on LinkedIn: [Project Video](https://www.linkedin.com/feed/update/urn:li:activity:7204919760705249280/)
